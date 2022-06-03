@@ -1,0 +1,9 @@
+STUDENTS
+<p *ngFor="let student of (students$ | async)">{{ student }}</p>
+TEACHERS
+<p *ngFor="let teacher of (teachers$ | async)">
+    {{ teacher.name }} {{ teacher.subject }}
+</p>
+
+<input type="text" #input>
+<button (click)="addStudent(input.value)">Add new student</button>
